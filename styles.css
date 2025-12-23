@@ -1,0 +1,328 @@
+/* =====================
+   ROOT VARIABLES
+===================== */
+:root {
+  --bg: #f7f6f3;
+  --bg-alt: #efece7;
+  --dark: #1f1f1f;
+  --muted: #6b6b6b;
+  --accent: #b59b6a;
+  --white: #ffffff;
+  --radius: 18px;
+}
+
+/* =====================
+   RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* =====================
+   GLOBAL
+===================== */
+.wrap {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* =====================
+   HEADER
+===================== */
+.topbar {
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.logo-text {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  gap: 22px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  position: relative;
+  height: 90vh;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-copy {
+  position: absolute;
+  inset: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  max-width: 700px;
+}
+
+.sub {
+  margin: 15px 0 30px;
+  max-width: 500px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.btn {
+  padding: 14px 26px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid white;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 80px 0;
+}
+
+.section.alt {
+  background: var(--bg-alt);
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* =====================
+   CATEGORIES
+===================== */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.tile img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.tile-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+/* =====================
+   PRODUCTS
+===================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.product {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.product img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.product-body {
+  padding: 15px;
+  text-align: center;
+}
+
+/* =====================
+   PRICING
+===================== */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.price-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 30px;
+  text-align: center;
+}
+
+.price-big {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+/* =====================
+   STEPS
+===================== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.step {
+  padding: 25px;
+  text-align: center;
+  border-radius: var(--radius);
+  background: white;
+}
+
+.step-num {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+/* =====================
+   FAQ
+===================== */
+.faq-item {
+  background: white;
+  padding: 20px;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background: #111;
+  color: #aaa;
+  padding: 30px 0;
+  text-align: center;
+}
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
